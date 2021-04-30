@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>
+            Family Book Web App
+        </title>
+    </head>
+    <body>
+        <h1>
+            My Family Book
+        </h1>
+        <img id="imgmain" src = "DSC_2266.JPG">
+        <h3 id="family_member_name">
+            Me, Shreeparna
+        </h3>
+        <div>
+            <button id="next"onclick="update()">
+            Next Member
+            </button>
+        </div>
+        <script>
+            var names = ["My Sister, Shivanya. I call her Kuhu.","My Mother,I call her maa."
+            ,"My father, I call him baba."];
+            var pics = ["DSC_2262.JPG","DSC_1920.JPG","BAROT VALLEY OCT 2020 032.JPG"]
+            var i = 0;
+            function update(){
+                document.getElementById("imgmain").src=pics[i]
+                document.getElementById("family_member_name").innerHTML=names[i]
+                i++
+                if(names[i]==undefined){ names[i] = names[names.length-1]}
+                if(pics[i]==undefined){ pics[i] = pics[pics.length-1]}
+            }
+        </script>
+    </body>
+</html>
